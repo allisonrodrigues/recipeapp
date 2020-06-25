@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Jost:wght@300;400;500;600&family=Sumana&display=swap');
+
+:root {
+	--font-body: 'Sumana', serif;
+	--font-headings: 'Righteous', sans-serif;
+	--font-caption: 'Jost', sans-serif; 
+
+	--background: white;
+
+	--primary: black;
+	--primary-on: rgb(245, 245, 245);
+	--primary-accent: gold; 
+
+	--animation: 0.3s;
+
+	/* --spacing: 1em; */
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--background);
+	margin: 0em;
+}
+
+footer{
+	margin-top: 7.5em;
+}
+
+img{
+	width: 100%;
+}
+
+mark{
+	background-color: var(--primary-accent);
+	padding: 0.75em;
+}
+hr{
+	border: 0.3em solid var(--primary);
+
+}
+
+.nav{
+    background-color: black;
+    font-family: var(--font-caption);
+}
