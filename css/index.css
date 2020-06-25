@@ -238,6 +238,19 @@ h1{
 	max-width: none;
 	height: 5em;
 } */
+
+.list-ingredients {
+	/* height of each item is: 1.625em */
+	--ing: 7;
+	height: ???;
+	transition: ???;
+}
+.closed {
+	height: 0;
+	overflow: hidden;
+}
+
+
 .step-bar {
 	position: fixed;
 	top: 0;
@@ -256,5 +269,6 @@ h1{
 	--pos: calc(var(--n) * -100% / var(--ttl));
 	transform: translateX(var(--pos));
 }
+
 
 /* Add a loading graphic */
