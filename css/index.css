@@ -23,6 +23,8 @@ html{
 body {
 	background-color: var(--background);
 	margin: 0em;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 footer{
@@ -173,8 +175,12 @@ h1{
 	height: 3.2em;
 	padding: 0.8em 1.25em 0.8em 1.25em;
 }
-.nav-img{
-	width: 1.5em;
+.nav-img {
+	height: 1.5em;
+}
+.nav-img img {
+	height: 1.5em;
+	width: auto;
 }
 
 .step-title{
@@ -208,6 +214,10 @@ h1{
 	line-height: 1.5;
 }
 
+
+
+
+
 /* .all-ingredients {
 	background-color: teal;
 	padding: 1em;
@@ -228,3 +238,37 @@ h1{
 	max-width: none;
 	height: 5em;
 } */
+
+.list-ingredients {
+	/* height of each item is: 1.625em */
+	--ing: 7;
+	height: ???;
+	transition: ???;
+}
+.closed {
+	height: 0;
+	overflow: hidden;
+}
+
+
+.step-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.steps {
+	--ttl: 3;
+	display: flex;
+	width: calc(100% * var(--ttl));
+	margin-top: 3.1em;
+	transition: transform 0.5s;
+
+	/* Sliding math */
+	--n: 0; /* slides start at 0 */
+	--pos: calc(var(--n) * -100% / var(--ttl));
+	transform: translateX(var(--pos));
+}
+
+
+/* Add a loading graphic */
