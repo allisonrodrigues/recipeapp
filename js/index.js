@@ -1,6 +1,6 @@
 // STARTING VALUES
 let recipeName = `Brioche Cinnamon Rolls`
-let ttlNumSteps = 3
+let ttlNumSteps = 13
 let imOnStep = 0
 
 // UI ELEMENTS OF NOTE
@@ -33,10 +33,23 @@ function goToNextStep() {
 
 // Click the "next" arrow (add an event listener)
 nextBtn.addEventListener(`click`, goToNextStep)
+prevBtn.addEventListener(`click`, goToPrevStep)
 
 
 ////////////////////////////////////////////////////
 // GO TO PREV STEP
+function goToPrevStep() {
+
+	// Decrease the step number by 1
+	imOnStep = imOnStep - 1
+
+	// Step slides to the right (1/3 to the left, if three steps)
+	stepsSlider.style.setProperty(`--n`, imOnStep)
+
+	// Step number increases (imOnStep)
+	stepNum.textContent = `Step ${imOnStep + 1} of ${ttlNumSteps}`
+
+}
 
 
 
@@ -63,5 +76,4 @@ stepsSlider.style.setProperty(`background-color`, `red`)
 //		  - Add a button to toggle the list
 // 3. When a user clicks the new button, add the 'closed' class
 //			- Now change "add" to "toggle"
-
 // 4. Replicate the "next" functionality for "prev"

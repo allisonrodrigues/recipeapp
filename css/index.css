@@ -214,31 +214,6 @@ h1{
 	line-height: 1.5;
 }
 
-
-
-
-
-/* .all-ingredients {
-	background-color: teal;
-	padding: 1em;
-}
-
-.list-ingredients {
-	display: flex;
-	justify-content: space-evenly;
-	text-align: center;
-}
-
-.item-ingredient {
-	width: 5em;
-	background-color: lightseagreen;
-}
-
-.item-ingredient img {
-	max-width: none;
-	height: 5em;
-} */
-
 .list-ingredients {
 	/* height of each item is: 1.625em */
 	--ing: 7;
@@ -258,7 +233,7 @@ h1{
 	width: 100%;
 }
 .steps {
-	--ttl: 3;
+	--ttl: 14;
 	display: flex;
 	width: calc(100% * var(--ttl));
 	margin-top: 3.1em;
@@ -268,6 +243,30 @@ h1{
 	--n: 0; /* slides start at 0 */
 	--pos: calc(var(--n) * -100% / var(--ttl));
 	transform: translateX(var(--pos));
+}
+
+/* COLLAPSIBLE BOXES */
+.collapsible {
+	background-color: var(--background);
+	color: var(--primary);
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border-top: 1em;
+
+	font-family: var(--font-caption);
+	letter-spacing: 0.1em;
+	font-size: 0.85em;
+	text-align: left;
+	font-weight: 500;
+	text-transform: capitalize;
+  }
+  
+.content {
+	padding: 1em 2em 1em 2em;
+	display: none;
+	overflow: hidden;
+	font-family: var(--font-caption);
 }
 
 
