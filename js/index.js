@@ -51,9 +51,25 @@ function goToPrevStep() {
 	// Step slides to the right (1/3 to the left, if three steps)
 	stepsSlider.style.setProperty(`--n`, imOnStep)
 
-	// Step number increases (imOnStep)
+	// Step number decreases (imOnStep)
 	stepNum.textContent = `Step ${imOnStep + 1} of ${ttlNumSteps}`
 
+}
+
+// COLLAPSIBLE BOX FOR INGREDIENTS & UTENSILS (source: https://www.w3schools.com/howto/howto_js_collapsible.asp)
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
 }
 
 
@@ -72,8 +88,6 @@ stepsSlider.style.setProperty(`background-color`, `red`)
 
 
 // stepNum.classList.add('closed')
-
-
 
 
 // 1. Fix up HTML and CSS layout
