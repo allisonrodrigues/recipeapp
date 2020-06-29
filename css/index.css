@@ -233,7 +233,7 @@ h1{
 	width: 100%;
 }
 .steps {
-	--ttl: 14;
+	--ttl: 13;
 	display: flex;
 	width: calc(100% * var(--ttl));
 	margin-top: 3.1em;
