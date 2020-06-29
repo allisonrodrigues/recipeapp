@@ -244,7 +244,9 @@ h1{
 	--pos: calc(var(--n) * -100% / var(--ttl));
 	transform: translateX(var(--pos));
 }
-
+.step {
+	width: calc(100% / var(--ttl));
+}
 /* COLLAPSIBLE BOXES */
 .collapsible {
 	background-color: var(--background);
